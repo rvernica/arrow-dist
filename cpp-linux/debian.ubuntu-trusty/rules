@@ -18,7 +18,9 @@ override_dh_auto_configure:
 	  -- \
 	  -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) \
 	  -DARROW_BUILD_TESTS=OFF \
-	  -DARROW_BOOST_USE_SHARED=ON
+	  -DARROW_BOOST_USE_SHARED=ON \
+	  -DCMAKE_C_COMPILER=/usr/bin/gcc-4.9 \
+	  -DCMAKE_CXX_COMPILER=/usr/bin/g++-4.9
 	dh_auto_configure \
 	  --sourcedirectory=c_glib \
 	  --builddirectory=c_glib_build \

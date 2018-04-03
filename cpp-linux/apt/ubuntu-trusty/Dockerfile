@@ -38,6 +38,12 @@ RUN \
     libglib2.0-doc \
     libjemalloc-dev \
     lsb-release \
-    pkg-config && \
+    pkg-config \
+    software-properties-common && \
+  add-apt-repository -y \
+    ppa:ubuntu-toolchain-r/test && \
+  apt update ${quiet} && \
+  apt install -y -V ${quiet} \
+    g++-4.9 && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
