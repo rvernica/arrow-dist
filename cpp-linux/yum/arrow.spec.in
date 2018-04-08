@@ -60,7 +60,6 @@ mkdir cpp/build
 cd cpp/build
 %cmake3 .. \
   -DCMAKE_BUILD_TYPE=$build_type \
-  -DARROW_ORC=ON \
 %if %{use_python}
   -DARROW_PYTHON=ON \
   -DPythonInterp_FIND_VERSION=ON \
@@ -69,7 +68,6 @@ cd cpp/build
 %if %{_centos_ver} == 6
   -DARROW_BOOST_VENDORED=ON \
 %endif
-  -DARROW_ORC=ON \
   -DARROW_BUILD_TESTS=OFF
 make %{?_smp_mflags}
 cd -
