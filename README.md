@@ -18,3 +18,15 @@
 -->
 
 ## Build scripts and Packaging Automation for Apache Arrow
+
+### `.deb` packages:
+
+    cpp-linux> rake apt:build APT_TARGETS=debian-stretch PARALLEL=yes
+
+Add `--volume", "/tmp/deb:/build:rw"` to `docker run` to get the
+packages on the host.
+
+### `.yum` packages:
+
+    cpp-linux> rake yum:build
+    cpp-linux> ls yum/repositories/centos/6/x86_64/Packages
