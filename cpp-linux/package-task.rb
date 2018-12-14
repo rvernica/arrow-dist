@@ -153,7 +153,7 @@ VERSION=#{@version}
         end
 
         cd(yum_dir) do
-          distribution_versions = (ENV["CENTOS_VERSIONS"] || "6,7").split(",")
+          distribution_versions = (ENV["CENTOS_VERSIONS"] || "6").split(",")
           threads = []
           distribution_versions.each do |version|
             id = "#{distribution}-#{version}"
