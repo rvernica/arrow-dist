@@ -60,3 +60,7 @@ RUN \
     rpmdevtools \
     tar && \
   yum clean ${quiet} all
+
+COPY scidb.repo /etc/yum.repos.d/scidb.repo
+
+RUN yum install --assumeyes scidb-18.1-libboost-devel

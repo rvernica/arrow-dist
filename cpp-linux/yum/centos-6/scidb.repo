@@ -1,0 +1,12 @@
+[scidb]
+name=SciDB repository
+baseurl=https://downloads.paradigm4.com/community/18.1/centos6.3
+gpgkey=https://downloads.paradigm4.com/key
+gpgcheck=1
+enabled=1
+
+[scidb-extra]
+name=SciDB extra libs repository
+baseurl=https://downloads.paradigm4.com/extra/18.1/centos6.3
+gpgcheck=0
+enabled=1
