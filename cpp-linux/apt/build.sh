@@ -44,6 +44,7 @@ esac
 specific_debian_dir="debian.${distribution}-${code_name}"
 
 run mkdir -p build
+run rm -rf build/*
 run cp /host/tmp/${PACKAGE}-${VERSION}.tar.gz \
   build/${PACKAGE}_${VERSION}.orig.tar.gz
 run cd build

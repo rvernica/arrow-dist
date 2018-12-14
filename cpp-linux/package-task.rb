@@ -91,6 +91,7 @@ class PackageTask
       "--rm",
       "--tty",
       "--volume", "#{Dir.pwd}:/host:rw",
+      "--volume", "/tmp/deb:/build:rw",
     ]
     if debug_build?
       build_command_line.concat(["--build-arg", "DEBUG=yes"])
