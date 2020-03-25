@@ -208,10 +208,10 @@ VERSION=#{@version}
           targets = (ENV["APT_TARGETS"] || "").split(",")
           if targets.empty?
             targets = [
-              "debian-stretch",
-              "ubuntu-trusty",
-              "ubuntu-xenial",
-              "ubuntu-artful",
+              "debian-stretch", # 9.0
+              "ubuntu-trusty",  # 14.04
+              "ubuntu-xenial",  # 16.04
+              "ubuntu-artful",  # 17.10
             ]
           end
           targets.each do |target|

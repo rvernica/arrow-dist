@@ -21,10 +21,8 @@
 
 ### `.deb` packages:
 
-    cpp-linux> rake apt:build APT_TARGETS=debian-stretch PARALLEL=yes
-
-Add `--volume", "/tmp/deb:/build:rw"` to `docker run` to get the
-packages on the host.
+    cpp-linux> rake apt:build APT_TARGETS=ubuntu-xenial PARALLEL=yes
+    cpp-linux> ls /tmp/deb
 
 ### `.yum` packages:
 
